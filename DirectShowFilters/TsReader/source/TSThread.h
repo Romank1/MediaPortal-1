@@ -35,7 +35,7 @@ public:
 
 	virtual void ThreadProc() = 0;
 	HRESULT StartThread();
-	HRESULT StopThread(DWORD dwTimeoutMilliseconds = 5000);
+	HRESULT StopThread(DWORD dwTimeoutMilliseconds = 200);
   void WakeThread();
 
 	BOOL ThreadIsStopping(DWORD dwTimeoutMilliseconds);
