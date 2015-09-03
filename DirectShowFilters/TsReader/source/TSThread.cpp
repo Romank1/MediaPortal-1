@@ -62,7 +62,7 @@ TSThread::~TSThread()
 {
 	if (m_threadHandle != INVALID_HANDLE_VALUE)
 	{
-	  StopThread(200);
+	  StopThread(20);
 	}
 	CloseHandle(m_hStopEvent);
 	CloseHandle(m_hDoneEvent);
