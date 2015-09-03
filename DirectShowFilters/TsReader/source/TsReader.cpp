@@ -499,11 +499,11 @@ CTsReaderFilter::~CTsReaderFilter()
 {
   LogDebug("CTsReaderFilter::dtor");
   //stop duration thread
-  StopThread(5000);
+  StopThread(20);
   
   //stop demux flush/read ahead thread
   m_demultiplexer.m_bShuttingDown = true;
-  m_demultiplexer.StopThread(5000);
+  m_demultiplexer.StopThread(20);
   
   HRESULT hr = m_pAudioPin->Disconnect();
   delete m_pAudioPin;
@@ -2356,7 +2356,7 @@ void CTsReaderFilter::ReadRegistryKeyDword(HKEY hKey, LPCTSTR& lpSubKey, DWORD& 
     }
     else
     {
-      LogDebug("Faíled to create default value for: %s", T2A(lpSubKey));
+      LogDebug("FaÃ­led to create default value for: %s", T2A(lpSubKey));
     }
   }
 }
