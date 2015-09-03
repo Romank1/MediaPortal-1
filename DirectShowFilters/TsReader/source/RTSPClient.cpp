@@ -463,7 +463,7 @@ void CRTSPClient::StopBufferThread()
   if (!m_BufferThreadActive)
     return;
 
-  StopThread(20000);
+  StopThread(20);
 
   m_BufferThreadActive = false;
   LogDebug("CRTSPClient::StopBufferThread done");
