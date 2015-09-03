@@ -158,7 +158,7 @@ CDeMultiplexer::~CDeMultiplexer()
   LogDebug("CDeMultiplexer::dtor");
   m_bShuttingDown = true;
   //stop file read thread
-  StopThread(5000);
+  StopThread(20);
   Flush(true);
   delete m_pCurrentAudioBuffer;
   delete m_pCurrentSubtitleBuffer;
